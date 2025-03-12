@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chnage on input or combine</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <form>
+        <select id ="one">
+            <option value="ABC">ABC</option>
+            <option value="XYZ">XYZ</option>
+        </select>
+        <input type="text" name="no" id ="no" maxlength="5">
+         <input type="text" name="two" id ="two" maxlength="1" value="N" readonly>
+         <input type="text" name="perno" id="perno">
+    </form>
+<script type="text/javascript">
+
+var one = $("#one").val();
+var no = $("#no").val();
+var two = $("#two").val();
+var perno = $("#perno").val();
+    
+$("#no").change(function(){
+ $("#perno").val($("#one").val() + $("#no").val() + $("#two").val());  
+   });
+</script>
+</body>
+</html>
